@@ -9,7 +9,7 @@ import {ResponseAPI} from "../dtos/ResponseAPI";
 export class TemperaturaService {
 
   private httpCliente: HttpClient = inject(HttpClient)
-  private baseUrl = 'http://35.239.216.31:5030/api/temperatura';
+  private baseUrl = 'http://34.69.10.192:5030/api/temperatura';
 
   private httpOptions = {
     headers: new HttpHeaders({
