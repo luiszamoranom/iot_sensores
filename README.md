@@ -1,4 +1,8 @@
 # iot_sensores
+Links:
+- http://34.123.113.210:80
+- http://34.171.176.106:8080/
+
 
 Primeramente notar que existen cuatro carpetas:
 - iot_db: carpeta que contendrá el docker compose de mysql + adminer (administrador de base de datos).
