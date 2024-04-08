@@ -31,6 +31,18 @@
   margin-bottom: 5vh;
 }
 
+@media (max-width: 768px) {
+  .container-dashboard-botones {
+    flex-direction: column;
+  }
+
+  .header {
+    min-height: 65vh;
+    max-height: 65vh;
+  }
+
+}
+
 /* estilo botones */
 .btn{
   background-color: dodgerblue;
@@ -58,4 +70,12 @@
   background-color: #e8e8e8;
   color: black;
   scale: 1.06;
+}
+
+
+@media (max-width: 767px) {
+  #titulo-proyecto {
+    margin-top: 15vh;
+    font-size: 1.5em;
+  }
 }
