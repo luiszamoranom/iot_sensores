@@ -1,0 +1,80 @@
+<div class="container-metrica-con-tablas">
+
+  <!-- condicional para mostrar imagen-->
+  <div>
+    @if(luminosidad_masReciente){
+      @if( 0 <= luminosidad_masReciente.valor &&  luminosidad_masReciente.valor <= 300){
+        <img src="./assets/luminosidad/fuerte.png" alt="Girl in a jacket" width="200" height="200">
+      } @else if (300 < luminosidad_masReciente.valor &&  luminosidad_masReciente.valor <= 600) {
+        <img src="./assets/luminosidad/alta.png" alt="Girl in a jacket" width="200" height="200">
+      } @else if (600 < luminosidad_masReciente.valor &&  luminosidad_masReciente.valor<= 900) {
+        <img src="./assets/luminosidad/media.png" alt="Girl in a jacket" width="200" height="200">
+      } @else if (900  < luminosidad_masReciente.valor &&  luminosidad_masReciente.valor<= 1200){
+        <img src="./assets/luminosidad/oscuro.png" alt="Girl in a jacket" width="200" height="200">
+      }
+    }
+  </div>
+
+  <!-- tabla para mostrar datos capturados del backend de la metrica -->
+  <div class="">
+    <table class="table-bordered">
+      <tr class="fila-tabla-estadistica">
+        <th class="columna-tabla-estadistica"> Estadística </th>
+        <th class="columna-tabla-estadistica"> Valor [cd] </th>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> Más reciente </td>
+        <td class="columna-tabla-estadistica"> {{ _utilsService.aproximarADosDecimales(luminosidad_masReciente?.valor) }} </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> Promedio </td>
+        <td class="columna-tabla-estadistica"> {{ _utilsService.aproximarADosDecimales(luminosidad_promedio) }} </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> Mínima </td>
+        <td class="columna-tabla-estadistica"> {{ _utilsService.aproximarADosDecimales(luminosidad_minima) }} </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> Máxima </td>
+        <td class="columna-tabla-estadistica"> {{_utilsService.aproximarADosDecimales(luminosidad_maxima)}} </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <!-- tabla para mostrar rangos de imagen para la metrica -->
+  <div class="">
+    <table class="table-bordered">
+      <tr class="fila-tabla-estadistica">
+        <th class="columna-tabla-estadistica"> Rango [cd] </th>
+        <th class="columna-tabla-estadistica"> Ilustración </th>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> 0 <= cd <= 300 </td>
+        <td class="columna-tabla-estadistica"> <img src="./assets/luminosidad/fuerte.png" alt="Girl in a jacket" width="25" height="25"> </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica">  300 < cd <= 600 </td>
+        <td class="columna-tabla-estadistica"> <img src="./assets/luminosidad/alta.png" alt="Girl in a jacket" width="25" height="25"> </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> 600 < cd <= 900</td>
+        <td class="columna-tabla-estadistica"> <img src="./assets/luminosidad/media.png" alt="Girl in a jacket" width="25" height="25"> </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> 900 < cd <= 1200 </td>
+        <td class="columna-tabla-estadistica"> <img src="./assets/luminosidad/oscuro.png" alt="Girl in a jacket" width="25" height="25"> </td>
+      </tr>
+
+    </table>
+  </div>
+
+</div>

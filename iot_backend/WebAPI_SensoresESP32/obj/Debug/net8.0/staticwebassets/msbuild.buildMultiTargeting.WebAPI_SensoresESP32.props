@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/WebAPI_SensoresESP32.props" />
+</Project>

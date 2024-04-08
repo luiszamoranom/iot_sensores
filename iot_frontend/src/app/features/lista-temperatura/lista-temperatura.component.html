@@ -1,0 +1,31 @@
+<!-- metrica -->
+<app-temperatura/>
+
+<!-- tabla para mostrar todos los registros capturados para la metrica -->
+<div class="container-lista-comun-tabla">
+  @if(temperaturas.length>0){
+    <table>
+      <tr class="fila-en-tabla-comun">
+        <th class="columna-en-tabla-comun">Valor</th>
+        <th class="columna-en-tabla-comun">Fecha creación</th>
+      </tr>
+
+      @for (humedad of temperaturas ; track humedad.id){
+        <tr class="fila-en-tabla-comun">
+          <td  class="columna-en-tabla-comun">
+            <div class="texto-dentro-de-columna-en-tabla-comun">
+              {{humedad.valor}}
+            </div>
+          </td>
+          <td  class="columna-en-tabla-comun">
+            <div class="texto-dentro-de-columna-en-tabla-comun">
+              {{humedad.createdAt}}
+            </div>
+          </td>
+        </tr>
+      }
+    </table>
+  } @else {
+    <p>Sin valores de temperatura</p>
+  }
+</div>

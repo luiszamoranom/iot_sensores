@@ -1,0 +1,23 @@
+POST http://35.239.216.31:5030/api/humedad
+Content-Type: application/json
+
+{
+  "valor": 40
+}
+
+
+###
+POST http://35.239.216.31:5030/api/temperatura
+Content-Type: application/json
+
+{
+  "valor": 40
+}
+
+###
+POST http://35.239.216.31:5030/api/luminosidad
+Content-Type: application/json
+
+{
+  "valor": 40
+}

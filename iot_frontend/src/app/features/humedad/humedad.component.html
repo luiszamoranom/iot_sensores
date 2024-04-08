@@ -1,0 +1,80 @@
+<div class="container-metrica-con-tablas">
+
+  <div>
+    <!-- condicional para mostrar imagen-->
+    @if(humedad_masReciente){
+      @if( 0 <= humedad_masReciente.valor &&  humedad_masReciente.valor <= 25){
+        <img src="./assets/humedad/baja.png" alt="Girl in a jacket" width="200" height="200">
+      } @else if (25 < humedad_masReciente.valor &&  humedad_masReciente.valor <= 50) {
+        <img src="./assets/humedad/media.png" alt="Girl in a jacket" width="200" height="200">
+      } @else if (50 < humedad_masReciente.valor &&  humedad_masReciente.valor<= 75) {
+        <img src="./assets/humedad/alta.png" alt="Girl in a jacket" width="200" height="200">
+      } @else if (75  < humedad_masReciente.valor &&  humedad_masReciente.valor<= 100){
+        <img src="./assets/humedad/muy_alta.png" alt="Girl in a jacket" width="200" height="200">
+      }
+    }
+  </div>
+
+  <!-- tabla para mostrar datos capturados del backend de la metrica -->
+  <div class="">
+    <table class="table-bordered">
+      <tr class="fila-tabla-estadistica">
+        <th class="columna-tabla-estadistica"> Estadística </th>
+        <th class="columna-tabla-estadistica"> Valor [% Humedad] </th>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> Más reciente </td>
+        <td class="columna-tabla-estadistica"> {{ _utilsService.aproximarADosDecimales(humedad_masReciente?.valor) }} </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> Promedio </td>
+        <td class="columna-tabla-estadistica"> {{ _utilsService.aproximarADosDecimales(humedad_promedio) }} </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> Mínima </td>
+        <td class="columna-tabla-estadistica"> {{ _utilsService.aproximarADosDecimales(humedad_minima) }} </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> Máximo </td>
+        <td class="columna-tabla-estadistica"> {{_utilsService.aproximarADosDecimales(humedad_maxima)}} </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <!-- tabla para mostrar rangos de imagen para la metrica -->
+  <div class="">
+    <table class="table-bordered">
+      <tr class="fila-tabla-estadistica">
+        <th class="columna-tabla-estadistica"> Rango [% humedad]</th>
+        <th class="columna-tabla-estadistica"> Ilustración </th>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> 0% <= % Humedad  <= 25% </td>
+        <td class="columna-tabla-estadistica"> <img src="./assets/humedad/baja.png" alt="Girl in a jacket" width="25" height="25"> </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> 25% <= % Humedad  <= 50% </td>
+        <td class="columna-tabla-estadistica"> <img src="./assets/humedad/media.png" alt="Girl in a jacket" width="25" height="25"> </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> 50% <= % Humedad  <= 75% </td>
+        <td class="columna-tabla-estadistica"> <img src="./assets/humedad/alta.png" alt="Girl in a jacket" width="25" height="25"> </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> 75% <= % Humedad  <= 100% </td>
+        <td class="columna-tabla-estadistica"> <img src="./assets/humedad/muy_alta.png" alt="Girl in a jacket" width="25" height="25"> </td>
+      </tr>
+
+    </table>
+  </div>
+
+</div>

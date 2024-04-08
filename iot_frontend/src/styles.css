@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+}
+
+/* estilos para listas */
+.container-lista-comun-estadisticas-generales {
+  display: flex;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  flex-direction: row;
+  width: 80vw;
+  justify-content: space-between;
+}
+
+.container-metrica-con-tablas {
+  min-width: 100vw;
+  max-width: 100vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fila-tabla-estadistica {
+  /*background: rgba(100,100,100,0.04);*/
+  background-color: #f5f6e6;
+}
+
+.columna-tabla-estadistica {
+  min-width: 15vw;
+  max-width: 15vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-lista-comun-tabla {
+  margin-top: 5vh;
+  display: flex;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  flex-direction: row;
+  width: 80vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.fila-en-tabla-comun {
+  min-width: 80vw;
+  max-width: 80vw;
+  background-color: #f5f6e6;
+}
+
+.columna-en-tabla-comun {
+  min-width: 30vw;
+}
+
+.texto-dentro-de-columna-en-tabla-comun {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BORDES EN LA TABLA */
+.container-lista-comun-tabla table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.fila-en-tabla-comun {
+  border-bottom: 1px solid black;
+}
+
+.columna-en-tabla-comun {
+  border-right: 1px solid black;
+}
+

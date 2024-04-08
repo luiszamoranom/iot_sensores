@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "9RnedjGmOyvtbP/wSlPvZbIQ4rcw1m9ZG1Z2pBcRds8=",
+  "Source": "WebAPI_SensoresESP32",
+  "BasePath": "_content/WebAPI_SensoresESP32",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

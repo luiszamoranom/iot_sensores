@@ -1,0 +1,87 @@
+<div class="container-metrica-con-tablas">
+
+  <!-- condicional para mostrar imagen-->
+  <div>
+    @if(temperatura_masReciente){
+      @if( -40 <= temperatura_masReciente.valor &&  temperatura_masReciente.valor <= 0){
+        <img src="./assets/temperatura/nieve.png" alt="Girl in a jacket" width="200" height="200">
+      } @else if (0 < temperatura_masReciente.valor &&  temperatura_masReciente.valor <= 10) {
+        <img src="./assets/temperatura/lluvia.png" alt="Girl in a jacket" width="200" height="200">
+      } @else if (10 < temperatura_masReciente.valor &&  temperatura_masReciente.valor<= 20) {
+        <img src="./assets/temperatura/frio.png" alt="Girl in a jacket" width="200" height="200">
+      } @else if (20  < temperatura_masReciente.valor &&  temperatura_masReciente.valor<= 30){
+        <img src="./assets/temperatura/templado.png" alt="Girl in a jacket" width="200" height="200">
+      } @else if (30 < temperatura_masReciente.valor){
+        <img src="./assets/temperatura/soleado.png" alt="Girl in a jacket" width="200" height="200">
+      }
+    }
+  </div>
+
+  <!-- tabla para mostrar datos capturados del backend de la metrica -->
+  <div class="">
+    <table class="table-bordered">
+      <tr class="fila-tabla-estadistica">
+        <th class="columna-tabla-estadistica"> Estadística </th>
+        <th class="columna-tabla-estadistica"> Valor [C°] </th>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> Más reciente </td>
+        <td class="columna-tabla-estadistica"> {{ _utilsService.aproximarADosDecimales(temperatura_masReciente?.valor) }} </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> Promedio </td>
+        <td class="columna-tabla-estadistica"> {{ _utilsService.aproximarADosDecimales(temperatura_promedio) }} </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> Mínima </td>
+        <td class="columna-tabla-estadistica"> {{ _utilsService.aproximarADosDecimales(temperatura_minima) }} </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> Máximo </td>
+        <td class="columna-tabla-estadistica"> {{_utilsService.aproximarADosDecimales(temperatura_maxima)}} </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <!-- tabla para mostrar rangos de imagen para la metrica -->
+  <div class="">
+    <table class="table-bordered">
+      <tr class="fila-tabla-estadistica">
+        <th class="columna-tabla-estadistica"> Rango [C°]</th>
+        <th class="columna-tabla-estadistica"> Ilustración </th>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> -40 <= T° <= 0 </td>
+        <td class="columna-tabla-estadistica"> <img src="./assets/temperatura/nieve.png" alt="Girl in a jacket" width="25" height="25"> </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> 0 < T° <= 10 </td>
+        <td class="columna-tabla-estadistica"> <img src="./assets/temperatura/lluvia.png" alt="Girl in a jacket" width="25" height="25"> </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> 10 < T° <= 20 </td>
+        <td class="columna-tabla-estadistica"> <img src="./assets/temperatura/frio.png" alt="Girl in a jacket" width="25" height="25"> </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> 20 < T° <= 30 </td>
+        <td class="columna-tabla-estadistica"> <img src="./assets/temperatura/templado.png" alt="Girl in a jacket" width="25" height="25"> </td>
+      </tr>
+
+      <tr class="fila-tabla-estadistica">
+        <td class="columna-tabla-estadistica"> 30 < T°  </td>
+        <td class="columna-tabla-estadistica"> <img src="./assets/temperatura/soleado.png" alt="Girl in a jacket" width="25" height="25"> </td>
+      </tr>
+
+    </table>
+  </div>
+
+</div>
