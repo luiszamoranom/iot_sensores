@@ -7,7 +7,8 @@ Primeramente notar que existen cuatro carpetas:
 - iot_esp8266: carpeta que contendrá el código fuente del esp8266
 
 Para arrancar el proyecto se suguiere seguir la siguiente arquitectura:
-![arquitectura](https://github.com/luiszamoranom/iot_sensores/assets/64230455/ec285308-6037-4e7e-81e9-45a60fff8ba9)
+![arquitectura](https://github.com/luiszamoranom/iot_sensores/assets/64230455/ab8746eb-0c44-4dca-8703-19118b0ffea6)
+
 
 Desplegar 4 contenedores, en el siguiente orden:
 1. Desplegar la base de datos en una VM independiente, accesible desde internet, arrancar docker compose, se puede modificar las variables de entorno
@@ -17,9 +18,7 @@ Desplegar 4 contenedores, en el siguiente orden:
 
 Luego de ello, podrás visualizar los cambios en el frontend.
 
-Al momento de la presentación, se posee los siguientes web publicas:
-- https://nuevastecnologias-iot-frontend.duckdns.org
-- https://nuevastecnologias-iot-gestor-bd.duckdns.org
+
 
 
 
